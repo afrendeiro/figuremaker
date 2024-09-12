@@ -43,4 +43,5 @@ for FIGURE in "$@"; do
         continue
     fi
     convert_to_bw "$INPUT" "$OUTPUT" > /dev/null 2>&1
+    convert $INPUT -strip -threshold 50% $OUTPUT
 done
